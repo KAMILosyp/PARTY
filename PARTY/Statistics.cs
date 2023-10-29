@@ -1,12 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace PARTY
 {
-    internal class Statistics
+    public class statistics
     {
+        public float Min { get; set; }
+        public float Max { get; set; }
+        public float Sum { get; set; }
+        public int Count { get; set; }
+        public statistics()
+        {
+            this.Count = 0;
+            this.Sum = 0;
+            this.Max = float.MinValue;
+            this.Min = float.MaxValue;
+        }
+        public void AddSupport(float support)
+        {
+            this.Count++;
+            this.Sum += support;
+            this.Min = Math.Min(support, this.Min);
+            this.Max = Math.Max(support, this.Max);
+        }
+        public float Average
+        {
+            get
+            {
+                return (this.Sum / this.Count);
+            }
+        }
     }
 }

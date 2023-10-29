@@ -5,13 +5,15 @@ namespace PARTY
     public interface IPoliticalParty
     {
         string Name { get; }
-        void AddScore(float score);
-        void AddScore(int score);
+        void AddSupport(float support);
 
-        void AddScore(double score);
+        void AddSupport(double support);
+        void AddSupport(int support);
 
-        void AddScore(string score);
+        void AddSupport(char support);
 
-        Statistics GetStatistics();
+        void AddSupport(string support);
+
+        statistics GetStatistics();
     }
 }
