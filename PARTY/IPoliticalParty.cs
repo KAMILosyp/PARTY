@@ -1,5 +1,4 @@
 ﻿
-
 namespace PARTY
 {
     public interface IPoliticalParty
@@ -13,7 +12,6 @@ namespace PARTY
         void AddSupport(char support);
 
         void AddSupport(string support);
-
         statistics GetStatistics();
     }
 }

@@ -1,5 +1,4 @@
 ﻿using PARTY;
-using System.Linq.Expressions;
 
 Console.WriteLine("Hi !!  Welcome in Party program which shows statistic for Political Party");
 Console.WriteLine("****************************************");
@@ -23,7 +22,6 @@ while (true)
     if (support == "F" || support == "f")
     {
         break;
-        Console.WriteLine("Statistic for Party is : ");
     }
     try
     {

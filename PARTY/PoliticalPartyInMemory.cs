@@ -1,14 +1,11 @@
 ﻿
-
 namespace PARTY
 {
     public class PoliticalPartyInMemory : PoliticalPartyBase
     {
-
         public override event SupportAddedDelegate SupportAdded;
 
         private List<float> support = new List<float>();
-
         public PoliticalPartyInMemory(string name)
             : base(name)
         {
@@ -23,10 +20,10 @@ namespace PARTY
                     SupportAdded(this, new EventArgs());
                 }
             }
-            else
+            else if(support < 0)
             {
-                throw new Exception("Invalid value");
-            }
+                throw new Exception("Value must be more than 0");
+            }            
         }
         public override statistics GetStatistics()
         {

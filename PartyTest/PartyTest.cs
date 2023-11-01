@@ -17,6 +17,7 @@ namespace PartyTest
 
             Assert.AreEqual(44, statistics.Max);
         }
+
         [Test]
         public void CheckingMinStat()
         {
@@ -30,6 +31,7 @@ namespace PartyTest
 
             Assert.AreEqual(11, statistics.Min);
         }
+
         [Test]
         public void CheckingAverageStat()
         {

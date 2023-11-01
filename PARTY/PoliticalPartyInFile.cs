@@ -1,13 +1,11 @@
 ﻿
-using System.Net.WebSockets;
-
 namespace PARTY
 {
     public class PoliticalPartyInFile : PoliticalPartyBase
     {
         private const string fileName = "supports.txt";
-        public override event SupportAddedDelegate SupportAdded;
 
+        public override event SupportAddedDelegate SupportAdded;
         public PoliticalPartyInFile(string name)
             : base(name)
         {
@@ -24,6 +22,10 @@ namespace PARTY
                         SupportAdded(this, new EventArgs());
                     }
                 }
+            }
+            else
+            {
+                throw new Exception("Value must be more than 0");
             }
         }
         public override statistics GetStatistics()
